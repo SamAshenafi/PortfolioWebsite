@@ -26,7 +26,7 @@ const StyledButton = styled(Button)(({ theme }) => ({
 }));
 
 const Resume = () => {
-  const resumeUrl = `${process.env.PUBLIC_URL}/resume.jpg`; // Update the extension and filename as needed
+  const resumeUrl = `${process.env.PUBLIC_URL}/SamAshenafiResume.jpg`; // Update the extension and filename as needed
 
   return (
     <Box
@@ -51,7 +51,7 @@ const Resume = () => {
             variant="contained"
             color="secondary"
             href={resumeUrl}
-            download="My_Resume.jpg"
+            download="SamAshenafiResume.jpg"
           >
             Download
           </StyledButton>
