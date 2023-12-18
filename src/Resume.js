@@ -11,6 +11,7 @@ const StyledPaper = styled(Paper)(({ theme }) => ({
   color: theme.palette.text.secondary,
   background: 'rgba(255, 255, 255, 0.8)',
   backdropFilter: 'blur(10px)',
+  overflow: 'auto', // Allows scrolling within the paper
 }));
 
 const StyledButton = styled(Button)(({ theme }) => ({
@@ -26,7 +27,7 @@ const StyledButton = styled(Button)(({ theme }) => ({
 }));
 
 const Resume = () => {
-  const resumeUrl = `${process.env.PUBLIC_URL}/SamAshenafiResume.jpg`; // Update the extension and filename as needed
+  const resumeUrl = `${process.env.PUBLIC_URL}/SamAshenafiResume.pdf`; // Updated to PDF
 
   return (
     <Box
@@ -38,24 +39,29 @@ const Resume = () => {
         justifyContent: 'center',
         minHeight: '100vh',
         background: 'linear-gradient(135deg, #DAAD86, #659DBD)',
-        fontFamily: 'Roboto Slab', // Apply the custom font
+        fontFamily: 'Roboto Slab',
       }}
     >
       <StyledPaper>
         <Typography variant="h4" component="h1" gutterBottom fontFamily="Roboto Slab">
           Resume
         </Typography>
-        <img src={resumeUrl} alt="Resume" style={{ maxWidth: '100%', height: 'auto', marginBottom: 16 }} />
+        <object 
+          data={resumeUrl} 
+          type="application/pdf"
+          style={{ width: '100%', height: '400px' }} // Adjust the size as needed
+        >
+          <p>Your browser does not support PDFs. Please download the PDF to view it: <a href={resumeUrl}>Download PDF</a>.</p>
+        </object>
         <Stack direction="column" spacing={2}>
           <StyledButton
             variant="contained"
             color="secondary"
             href={resumeUrl}
-            download="SamAshenafiResume.jpg"
+            download="SamAshenafiResume.pdf"
           >
             Download
           </StyledButton>
-          {/* The Print button has been removed */}
         </Stack>
       </StyledPaper>
     </Box>

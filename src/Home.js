@@ -12,7 +12,7 @@ const Home = () => {
         Welcome to My Portfolio Website
       </Typography>
       <Typography variant="body1" gutterBottom>
-        This website is a personal portfolio developed using React, showcasing projects, skills, and professional information. The interface is built with Material-UI, a popular React UI framework that implements Google's Material Design. The site is responsive, ensuring it works across different devices and screen sizes.
+        This website is a personal portfolio developed using React, showcasing projects, skills, and professional information. The interface is built with Material-UI, a React UI framework that implements Google's Material Design. The site is responsive, so it works across different devices and screen sizes.
       </Typography>
       <Typography variant="h6" gutterBottom>
         Connect with me
