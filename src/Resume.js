@@ -27,7 +27,7 @@ const StyledButton = styled(Button)(({ theme }) => ({
 }));
 
 const Resume = () => {
-  const resumeUrl = `${process.env.PUBLIC_URL}/SamAshenafiResume.pdf`; // Updated to PDF
+  const resumeUrl = `${process.env.PUBLIC_URL}/Sam Ashenafi Resume.pdf`; // Updated to PDF
 
   return (
     <Box
